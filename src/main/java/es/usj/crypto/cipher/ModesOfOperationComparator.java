@@ -21,13 +21,13 @@ import java.util.Arrays;
  * chaining, meaning each block depends on the encryption of the previous block.
  * </p>
  */
-public class ModesOfOperationApp {
+public class ModesOfOperationComparator {
 
     /**
      * Path to the folder where encrypted BMP files will be saved.
      * Adjust this path to a valid directory on your system.
      */
-    public static final String OUTPUT_FOLDER = "/Users/aborroy/Downloads/usj/tmp/";
+    public static final String OUTPUT_FOLDER = "/Users/angel.fernandoborroy/Downloads/tmp/";
 
     /**
      * BMP header length in bytes (54 bytes for BMP images).
@@ -93,7 +93,7 @@ public class ModesOfOperationApp {
         String fileNameOutput = getFileName(transformation);
 
         // Load the input BMP file, prepare the output file, and apply the encryption.
-        try (InputStream fileIn = ModesOfOperationApp.class.getClassLoader().getResourceAsStream(fileNameInput);
+        try (InputStream fileIn = ModesOfOperationComparator.class.getClassLoader().getResourceAsStream(fileNameInput);
              FileOutputStream fileOut = new FileOutputStream(OUTPUT_FOLDER + fileNameOutput);
              CipherOutputStream cipherOut = new CipherOutputStream(fileOut, cipher)) {
 

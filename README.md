@@ -32,7 +32,7 @@ This will compile the code and package it into a runnable format.
 After building the project, you can run it with the following command:
 
 ```bash
-$ java -cp target/classes es.usj.crypto.cipher.ModesOfOperationApp
+$ java -cp target/classes es.usj.crypto.cipher.ModesOfOperationComparator
 ```
 
 This will execute the encryption process on the input BMP file located in the `resources` folder. The project encrypts the image using both DES and AES with ECB and CBC modes of operation.
